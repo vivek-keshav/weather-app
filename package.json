@@ -5,5 +5,8 @@
     "scripts":{
         "start":"nodemon src/app.js -e js,mjs,hbs"
     },
-    "dependencies":{"express":"^4.17.3","hbs":"^4.2.0","path":"^0.12.7","request":"^2.88.2"},
+    "dependencies":{"express":"^4.17.3",
+        "hbs":"^4.2.0",
+        "path":"^0.12.7",
+        "request":"^2.88.2"},
     "devDependencies":{"nodemon":"^2.0.15"}}
