@@ -14,11 +14,11 @@ const forecast = (latitude,longitude,callback)=>{
         }else if(response.body.error){
             callback('unable to find location' , undefined)
         }else{
-            // console.log(response.body)
-            callback(
-                undefined ,response.body.currently.icon+ ',' +'and  temp is ' +response.body.currently.temperature + ' F',
-                response.body.currently.humidity + ', ' + response.body.currently.windSpeed
-            )
+            // console.log(response.body.daily.data[0])
+            callback(undefined ,response.body.currently.icon+ ',' +'and  temp is ' +response.body.currently.temperature + ' F' + '  ' +  'and windSpeed is' + response.body.currently.windSpeed)
+                
+                console.log(response.body.currently.icon+ ',' +'and  temp is ' +response.body.currently.temperature + ' F' + '   '+ 'And windSpeed is' + response.body.currently.windSpeed )
+           
             // callback(undefined ,)
             
         }
