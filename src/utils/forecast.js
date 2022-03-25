@@ -17,7 +17,7 @@ const forecast = (latitude,longitude,callback)=>{
             // console.log(response.body.daily.data[0])
             callback(undefined ,response.body.currently.icon+ ',' +'and  temp is ' +response.body.currently.temperature + ' F' + '  ' +  'and windSpeed is' + response.body.currently.windSpeed)
                 
-                console.log(response.body.currently.icon+ ',' +'and  temp is ' +response.body.currently.temperature + ' F' + '   '+ 'And windSpeed is' + response.body.currently.windSpeed )
+                console.log(response.body.currently.icon+ ',' +'and  temp is ' +response.body.currently.temperature + ' F' + '   '+ 'And windSpeed is' + response.body.currently.windSpeed +"km/h")
            
             // callback(undefined ,)
             
