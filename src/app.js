@@ -8,6 +8,8 @@ const forecast= require('./utils/forecast')
 console.log( ' this is form app.js')
 const app = express()
 
+const port= process.env.PORT || 3000
+
 // path.join() joins current directory to any other directory
 // if you console.log(__dirname) it will give dir path
 const publicDirectoryPath= path.join(__dirname ,'../public')
@@ -93,6 +95,6 @@ app.get('*',(req, res)=>{
     res.send('my 404 page')
 })
 
-app.listen(3000,()=>{
-    console.log('this is running on port 3000')
+app.listen(port,()=>{
+    console.log('this is running on port ' + port)
 })
