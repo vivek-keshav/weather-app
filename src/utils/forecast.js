@@ -15,11 +15,11 @@ const forecast = (latitude,longitude,callback)=>{
             callback('unable to find location' , undefined)
         }else{
             // console.log(response.body.daily.data[0])
-            callback(undefined ,response.body.currently.icon+ ',' +'and  temp is ' +response.body.currently.temperature + ' F' + '  ' +  'and windSpeed is' + response.body.currently.windSpeed)
+            callback(undefined ,response.body.currently.icon+ ',' +'and  temp is ' +response.body.currently.temperature + ' F' + '  ' +  'and windSpeed is ' + response.body.currently.windSpeed + ' '  + 'km/h')
                 
-                console.log(response.body.currently.icon+ ',' +'and  temp is ' +response.body.currently.temperature + ' F' + '   '+ 'And windSpeed is' + response.body.currently.windSpeed +"km/h")
+                console.log(response.body.currently.icon+ ',' +'and  temp is ' +response.body.currently.temperature + ' F' + '   '+ 'And windSpeed is' + response.body.currently.windSpeed )
            
-            // callback(undefined ,)
+            // callback(undefined ,)'
             
         }
     
