@@ -20,9 +20,9 @@ const forecast = (latitude,longitude,callback)=>{
             callback('unable to find location' , undefined)
         }else{
             // console.log(response.body.daily.data[0])
-            callback(undefined ,response.body.currently.icon+ ',' +'and  temp is ' +celsiusTemp + ' C°' + '  ' +  'and windSpeed is ' + response.body.currently.windSpeed + ' '  + 'km/h')
+            callback(undefined ,response.body.currently.icon+ ',' +'and  temp is ' +celsiusTemp + ' C°' + '  ' +  'and wind speed is ' + response.body.currently.windSpeed + ' '  + 'km/h')
                 
-                console.log(response.body.currently.icon+ ',' +'and  temp is ' +celsiusTemp + '  C° ' + '   '+ 'And windSpeed is' +  response.body.currently.windSpeed )
+                console.log(response.body.currently.icon+ ',' +'and  temp is ' +celsiusTemp + '  C° ' + '   '+ 'And wind speed is' +  response.body.currently.windSpeed )
            
             // callback(undefined ,)'
             
