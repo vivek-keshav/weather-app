@@ -1,11 +1,13 @@
 
-
+ 
 const weatherForm=document.querySelector('form')
 const search=document.querySelector('input')
 
 const messageOne=document.querySelector('#message-1')
 const messageTwo=document.querySelector('#message-2')
+// const messageThree=document.querySelector('#message-3')
 
+const temConvertor=document.querySelector('.temConvertor')
 
 
 
@@ -27,9 +29,18 @@ weatherForm.addEventListener('submit' ,(e) => {
             }else {
 
                 messageOne.textContent=data.location
-                messageTwo.textContent=data.forecast
+                messageTwo.textContent=data.forecast+' In '+data.address+' '+'and'+' Temperature is'+ ' '+data.temperature
             }
+
+          
+
+
         })
+
+       
+
+       
     })
      
+  
 })

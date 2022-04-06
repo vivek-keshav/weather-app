@@ -1,7 +1,7 @@
 
 body{
 
-     color:#15574e;      
+     color:#888888;      
     font-family:arial;
     max-width:650px;
     padding:0 16 px;
@@ -49,14 +49,19 @@ header a{
 input{
     border:3px solid #cccccc;
     padding:8px;
+    width:350px;
+    
+
+    
 }
 
 button{
     cursor:pointer;
     border:3px solid #888888;
-    background-color: #888888;
+    background-color:rgb(138, 179, 64);
     color:white;
     padding: 8px;
 }
+
 
 
