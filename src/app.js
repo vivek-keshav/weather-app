@@ -29,7 +29,7 @@ app.set('views' ,viewPath) // views is folder name & view path is total path of 
 
 app.get('/', (req, res) =>{
     res.render('index' ,{
-        title:'weather', 
+        title:'Earth-Weather', 
         name:'vivek'
     })
 })
@@ -76,14 +76,20 @@ app.get('/weather', (req ,res)=> {
             return res.send({error})
         }
         console.log(latitude)
-        forecast(latitude,longitude,(error,forecastData)=>{
+        forecast(latitude,longitude,(error,{icon,temp,windSpeed}={})=>{
             if(error){
                 return res.send({error})
             }
             res.send({
-                forecast:forecastData,
-                location,
+                // forecast:forecastData,
+                // location,
+                // address:req.query.address,
+                location:location,
+                forecast:icon,
                 address:req.query.address,
+                temperature:temp,
+                AirSpeed:windSpeed,
+                
                 
             })
         })

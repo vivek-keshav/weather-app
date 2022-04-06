@@ -19,12 +19,20 @@ const forecast = (latitude,longitude,callback)=>{
         }else if(response.body.error){
             callback('unable to find location' , undefined)
         }else{
+            callback(undefined , {
+
+                icon:response.body.currently.icon,
+                temp:celsiusTemp,
+                windsSpeed:response.body.currently.windSpeed + ' '  + 'km/h'
+            })
             // console.log(response.body.daily.data[0])
-            callback(undefined ,response.body.currently.icon+ ',' +'and  temp is ' +celsiusTemp + ' C°' + '  ' +  'and wind speed is ' + response.body.currently.windSpeed + ' '  + 'km/h')
+        //    callback(undefined ,response.body.currently.icon+ ',' +'and  temp is ' +celsiusTemp + ' C°' + '  ' +  'and wind speed is ' + response.body.currently.windSpeed + ' '  + 'km/h')
                 
-                console.log(response.body.currently.icon+ ',' +'and  temp is ' +celsiusTemp + '  C° ' + '   '+ 'And wind speed is' +  response.body.currently.windSpeed )
-           
-            // callback(undefined ,)'
+        //         console.log(response.body.currently.icon+ ',' +'and  temp is ' +celsiusTemp + '  C° ' + '   '+ 'And wind speed is' +  response.body.currently.windSpeed )
+            
+        //     // callback(undefined ,)'
+
+        
             
         }
     
